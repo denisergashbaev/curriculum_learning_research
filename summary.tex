@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\title{Summary of some papers on curriculum learning}
+\author{Denis Ergashbaev}
+
+\begin{document}
+\maketitle
+
+%Benefit to the researcher: Is there potential benefit to the researcher? How will the project support their research program?
+%Benefit to the student/post doctoral fellow: Is there potential benefit to the student/postdoctoral fellow by participating in the project with regards to skills development?
+%Project design and rationale: Is the project design clearly presented? Are the project activities clearly articulated and reasonable for the timeframe specified?
+
+\subsection{Curriculum Learning}
+
+Curriculum learning is a way to train a machine learning algorithm in order to accelerate speed of convergence and/or final model performance. Intuitively, one would try to order the tasks according to their difficulty such that the model learns easy tasks prior to more complicated ones. \\
+
+In his work\cite{elman1993learning}, Jeffrey Elman has demonstrated the importance of curriculum when training neural networks. In particular, he has shown that good curriculum can accelerate speed of convergence. Notably, the model tasked with learning simple language grammar was unable to learn without introduction of curriculum learning. 
+
+\begin{itemize}
+	\item catastrophic forgetting 
+\end{itemize}
+
+\bibliography{references}
+\bibliographystyle{plain}
+\end{document}
