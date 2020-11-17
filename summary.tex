@@ -7,19 +7,18 @@
 \begin{document}
 \maketitle
 
-%Benefit to the researcher: Is there potential benefit to the researcher? How will the project support their research program?
-%Benefit to the student/post doctoral fellow: Is there potential benefit to the student/postdoctoral fellow by participating in the project with regards to skills development?
-%Project design and rationale: Is the project design clearly presented? Are the project activities clearly articulated and reasonable for the timeframe specified?
+\section{Curriculum Learning}
 
-\subsection{Curriculum Learning}
-
-Curriculum learning is a way to train a machine learning algorithm in order to accelerate speed of convergence and/or final model performance. Intuitively, one would try to order the tasks according to their difficulty such that the model learns easy tasks prior to more complicated ones. \\
+Curriculum learning refers to a concept of ordering a set of related tasks during training of a model. The desired result is that such a procedure would increase speed of convergence and/or final model performance. Intuitively, one would try to order the tasks according to their difficulty such that the model learns easy tasks prior to more complicated ones.\\
 
 In his work\cite{elman1993learning}, Jeffrey Elman has demonstrated the importance of curriculum when training neural networks. In particular, he has shown that good curriculum can accelerate speed of convergence. Notably, the model tasked with learning simple language grammar was unable to learn without introduction of curriculum learning. 
 
-\begin{itemize}
-	\item catastrophic forgetting 
-\end{itemize}
+\section{Reverse curriculum generation for reinforcement learning~\cite{florensa2017reverse}}
+This work~\cite{florensa2017reverse} uses curriculum learning in order to approach domains where sparse rewards make learning difficult.\\
+
+In particular, the authors consider a task where a robotic arm is to place a ring into a peg. If framed as a reinforcement learning problem the correct reward function (ie, the one that rewards intended outcome only without distorting the objective) is to give a robot $+1$ at the desired end configuration (ie, ring is placed into a peg) and $0$ otherwise. Such reward scheme turns it into a sparse environment as the agent (robot) does not receive intermediary feedback as to how well it is doing unless the end configuration is reached. Although reward shaping can be used to reduce the sparsity, it has been shown (TODO where) that designing a good shaping function requires extensive experimentation. In addition, a bad shaping function will lead to undesired results.
+
+%% TODO place figures here
 
 \bibliography{references}
 \bibliographystyle{plain}
